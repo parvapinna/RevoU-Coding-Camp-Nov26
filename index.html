@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML/CSS/Tailwind Coding Camp Practise</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <style type="text/tailwindcss">
+        body {
+            @apply min-h-screen text-white;
+            background: linear-gradient(135deg, #0a0015 0%, #0d0030 25%, #060820 50%, #001030 75%, #000510 100%);
+        }
+
+        .glass {
+            background: rgba(255, 255, 255, 0.07);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.15);
+            @apply rounded-2xl p-6 shadow-lg;
+        }
+
+        .glass-table {
+            background: rgba(255, 255, 255, 0.07);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.15);
+            @apply rounded-2xl overflow-hidden shadow-lg w-full border-collapse;
+        }
+
+        .glass-table th {
+            background: rgba(255, 255, 255, 0.15);
+            @apply px-4 py-2 text-left font-semibold tracking-wide;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+        }
+
+        .glass-table td {
+            @apply px-4 py-2;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.07);
+        }
+
+        .glass-table tr:last-child td {
+            border-bottom: none;
+        }
+
+        .glass-table tr:hover td {
+            background: rgba(255, 255, 255, 0.05);
+        }
+
+        a {
+            @apply text-purple-300 underline underline-offset-2 hover:text-purple-100 transition-colors;
+        }
+
+        h1 { @apply text-3xl font-bold mb-2; }
+        h2 { @apply text-xl font-semibold mb-2 text-purple-200; }
+        h3 { @apply text-lg font-medium mb-2 text-indigo-200; }
+        ul, ol { @apply ml-5 space-y-1; }
+        ul { @apply list-disc; }
+        ol { @apply list-decimal; }
+    </style>
+</head>
+<body class="p-8 space-y-6 max-w-3xl mx-auto">
+
+    <!-- Hero -->
+    <div class="glass text-center">
+        <h2><em>Welcome! Selamat datang! Wilkommen! Mirë se vini!</em></h2>
+        <h1>This is my super secret coding practise page.</h1>
+    </div>
+
+    <!-- Text styles -->
+    <div class="glass">
+        <h2>A paragraph on text styles:</h2>
+        <p>Thomas can't decide whether to <em>emphasise</em> his words with <em>em</em>
+            or <i>i</i>, so he decided to <b>bold</b> them instead. However, he can't decide
+            whether to use <strong>strong</strong> or <b>b</b> either. Eventually, he decided
+            to <sub>make everything</sub> <sup>smaller</sup>.</p>
+    </div>
+
+    <!-- Lists -->
+    <div class="glass">
+        <h2>A few lists:</h2>
+        <h3>My special interests</h3>
+        <ul>
+            <li>Flowers</li>
+            <li>The Victorian/Edwardian era</li>
+            <li>Life sim games</li>
+            <li>Historical fashion</li>
+            <li>Gifted/neurodivergent studies</li>
+            <li>Disability studies</li>
+            <li>Trains</li>
+            <li>Thermodynamics</li>
+            <li>20th century Albanian history</li>
+        </ul>
+
+        <h3 class="mt-4">How to make prawn (shrimp) crackers</h3>
+        <ol>
+            <li>Get a pack of uncooked crackers.</li>
+            <li>Deep-fry the crackers in oil.</li>
+            <li>Serve them on a plate, and optionally, salt them.</li>
+        </ol>
+    </div>
+
+    <!-- Table -->
+    <div class="glass">
+        <h2 class="mb-4">A table of my dogs</h2>
+        <table class="glass-table">
+            <tr>
+                <th>Name</th>
+                <th>Breed</th>
+                <th>Age</th>
+                <th>Colour</th>
+                <th>Weight</th>
+                <th>Personality</th>
+            </tr>
+            <tr>
+                <td>Buddy</td>
+                <td>Miniature Schnauzer</td>
+                <td>3 years</td>
+                <td>Salt and pepper</td>
+                <td>9 kg</td>
+                <td>A little punk who is afraid of rain</td>
+            </tr>
+            <tr>
+                <td>Axel</td>
+                <td>Samoyed</td>
+                <td>4 years</td>
+                <td>White</td>
+                <td>23 kg</td>
+                <td>A troublemaking greedy pervert</td>
+            </tr>
+        </table>
+    </div>
+
+    <!-- Image -->
+    <div class="glass flex flex-col items-center gap-3">
+        <h2>Enver Hoxha jumpscare</h2>
+        <img width="200" src="./enver.jpg" alt="Rroftë Shqipëria motherf" class="rounded-xl border border-white/20 shadow-lg">
+    </div>
+
+    <!-- Links -->
+    <div class="glass flex flex-col gap-2">
+        <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ">Click here to win a thousand dollars</a>
+        <a href="./forms.html">I don't receive criticism (/j)</a>
+    </div>
+
+</body>
+</html>
